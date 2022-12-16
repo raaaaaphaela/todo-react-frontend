@@ -16,9 +16,8 @@ export default function ToDoCard({description, id, status}: {
         <div className={"todo-card"}>
             <h2>{description}</h2>
             <div className={"todo-card--actions"}>
-                <p>Status: {status}</p>
                 <p><Link to={"/todo/" + id}>Bearbeiten</Link></p>
-                <button onClick={() => deleteItem()}>Löschen</button>
+                <button className={"button button_white"} onClick={() => deleteItem()}>Löschen</button>
             </div>
         </div>
     )

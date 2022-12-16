@@ -3,7 +3,7 @@ import React from "react";
 import ToDoCard from "./ToDoCard";
 import useTodos from "../useTodos";
 
-export default function ToDoGallery () {
+export default function ToDoGallery() {
 
     const todos = useTodos();
 

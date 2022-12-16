@@ -34,7 +34,7 @@ export default function AddTodo() {
             <h2>Neues Item hinzufügen:</h2>
             <form onSubmit={sendNewTodo}>
                 <input type="text" name="description" onChange={createNewTodo}/>
-                <button type={"submit"}>Hinzufügen</button>
+                <button className={"button button_blue"} type={"submit"}>Hinzufügen</button>
             </form>
         </div>
     )

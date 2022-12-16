@@ -43,21 +43,28 @@ export default function EditCard() {
     return (
         <div>
             {todo === undefined ? <p>Sorry, dieses Item ist nicht vorhanden...</p> : (
-                <div>
-                    <form onSubmit={onSubmit}>
-                        <label htmlFor="description">Description</label><br/>
-                        <input type="text" name="description" value={todo.description} onChange={onChange}/><br/>
-
-                        <label htmlFor="status">Status</label><br/>
-
-                        <select value={todo.status} onChange={onSelectChange}>
-                            <option value="OPEN">OPEN</option>
-                            <option value="IN_PROGRESS">IN_PROGRESS</option>
-                            <option value="DONE">DONE</option>
-                        </select><br/>
-                        <button>Änderungen speichern</button>
-                    </form>
-                    <button onClick={() => navigate("/")}>Zurück</button>
+                <div className={"edit-container"}>
+                    <div className={"edit-form"}>
+                        <div>
+                            <h2>Item ändern</h2>
+                            <form onSubmit={onSubmit}>
+                                <div>
+                                    <label htmlFor="description">Description: </label>
+                                    <input type="text" name="description" value={todo.description} onChange={onChange}/>
+                                </div>
+                                <div>
+                                    <label htmlFor="status">Status: </label>
+                                    <select value={todo.status} onChange={onSelectChange}>
+                                        <option value="OPEN">OPEN</option>
+                                        <option value="IN_PROGRESS">IN_PROGRESS</option>
+                                        <option value="DONE">DONE</option>
+                                    </select>
+                                </div>
+                                <button className={"button button_white"}>Änderungen speichern</button>
+                            </form>
+                        </div>
+                        <button className={"button button_white"} onClick={() => navigate("/")}>Zurück</button>
+                    </div>
                 </div>
             )
             }
