@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.nav li {
+    list-style: none;
+    color: beige;
+    background: green;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+.nav li {
+    cursor: pointer;
+}
+
+.todo-card {
+    box-shadow: 10px 20px 15px #9ca8c7;
+    border-radius: 20px;
+    margin: 1rem;
+    padding: 1rem 2rem;
+    background-color: #d2ddf3;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.todo-card:hover {
+    transform: scale(1.05);
+}
+
+.todo-card--actions {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    margin: 2rem 1rem 1rem 1rem;
+}
+.todo-card--actions p:first-child {
+    margin-bottom: 1rem;
+}
+
+.todo-gallery {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 40%;
+   margin: 0 auto;
+}
+
+/* Add new Todo */
+.add-todo {
+    margin: 2rem 0;
+}
+
+.add-todo form {
+    margin: 1rem;
+}
+.add-todo input {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.add-todo button {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #d2ddf3;
+    background-color: #d2ddf3;
+}
+
+.add-todo button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.App {
+    text-align: center;
+}
