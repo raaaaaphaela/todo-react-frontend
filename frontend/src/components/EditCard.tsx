@@ -32,8 +32,7 @@ export default function EditCard() {
         todo !== undefined && setTodo({...todo, status: value})
     }
 
-    const onSubmit = (event: FormEvent<HTMLFormElement>) => {
-        event.preventDefault()
+    const onSubmit = () => {
         todo !== undefined && axios.put(`/api/todo/${todo.id}/update`, todo)
             .then(() => setTodo(todo))
             .catch(error => console.log(error))

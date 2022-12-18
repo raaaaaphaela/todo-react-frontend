@@ -1,9 +1,7 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import ToDoGallery from "./components/ToDoGallery";
-import EditCard from "./components/EditCard";
-import Navigation from "./Navigation";
+import {BrowserRouter} from "react-router-dom";
+import Homepage from "./Homepage";
 
 export type Todo = {
     id: string;
@@ -15,13 +13,8 @@ function App() {
 
     return (
         <div className="App">
-            <h1>Raphas T0D0 List</h1>
             <BrowserRouter>
-                <Routes>
-                    <Route path={"/"} element={<Navigation/>}></Route>
-                    <Route path={"/todo/:id"} element={<EditCard/>}></Route>
-                    <Route path={"/:status"} element={<ToDoGallery/>}></Route>
-                </Routes>
+                <Homepage/>
             </BrowserRouter>
         </div>
     );

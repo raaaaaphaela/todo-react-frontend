@@ -1,18 +1,17 @@
 import React from "react";
 import AddTodo from "./components/AddTodo";
-import ToDoGallery from "./components/ToDoGallery";
+import {NavLink} from "react-router-dom";
 
-export default function Navigation () {
+export default function Navigation() {
     return (
         <div>
             <AddTodo/>
-          {/*  <ul className={"nav"}>
-                <li><Link to={"/"}>Alle</Link></li>
-                <li><Link to={"/open"}>Todo</Link></li>
-                <li><Link to={"/in_progress"}>Doing</Link></li>
-                <li><Link to={"/done"}>Done</Link></li>
-            </ul>*/}
-            <ToDoGallery/>
+            <nav>
+                <NavLink to="/">Home</NavLink>
+                <NavLink to="/board/todo">Todo</NavLink>
+                <NavLink to="/board/doing">Doing</NavLink>
+                <NavLink to="/board/done">Done</NavLink>
+            </nav>
         </div>
     )
 }
